@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Grape+Nuts&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quattrocento+Sans:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Water+Brush&display=swap');
+
+
+.sidebar{
+    display: none;
+}
+
+
+@media(min-width:768px){
+
+.sidebar-container{
+    display: none;
+}
+
+.mobile-sidebar{
+    display: none;
+}
+.sidebar{
+ display: inline;
+   margin-top: -2px;
+   margin-left: 0px; 
+   padding: 20px;
+    width:200px;
+height: 1000px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+}
+.sidebar-border{
+    margin-left: -30px;
+    width:250px;
+   opacity: 0.5;
+}
+
+.filter{
+   padding-bottom: 20px;
+   margin-left: 10px ;
+    color: black;
+}
+.categories>p{
+   
+    margin-top: 40px;
+margin-left: 10px;
+color: black;
+
+}
+.formss{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-items: space-between;
+    height: 100vh;
+
+}
+.formss>div{
+    display: flex;
+    align-items: center;
+      
+    margin-top: 20px;
+}
+input{
+    
+    margin-right: 15px;
+    border-radius: 20px;
+}
+label{
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.others{
+    color: grey;
+   
+}
+.down{
+    width:100px;
+    cursor: pointer;
+}
+.categories{
+   
+    height: 300px;
+    margin-bottom: 50px;
+}
+.Price-range>p{
+margin-left: 10px;
+color: black;
+margin-bottom: 20px;
+}
+.min-button{
+    background-color: #fafafa;
+    border: none;
+    color:grey ;
+    height: 60px;
+    width: 80px;
+    border-radius: 20px;
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+}
+.min-price{
+    border: 1px solid lightgrey;
+    width:80px;
+}
+.min-price::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+.setprice{
+    background-color:#47a358;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    width: 170px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.discount{
+    margin-top: 80px;
+    background-image: url("https://www.treehugger.com/thmb/mjYanFmw8_khTp3N0h32DAGUXD0=/4592x3056/filters:no_upscale():max_bytes(150000):strip_icc()/green-leaves-natural-background-1060017800-a2d4efe786904de39c6591e71bed4bc2.jpg");
+    height: 200px;
+    background-size: contain;
+    background-attachment: fixed;
+    width:100%;
+
+}
+.discount  p{
+    margin-left: 10px;
+    width:100%;
+    color: white;
+}
+.discount  h3{
+    margin: 10px;
+ 
+    color: white;
+}
+.glass{
+    height: 100%;  
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding-top: 20px;
+    font-size: 16px;
+}
+input{
+    accent-color: #47a358;
+}
+}

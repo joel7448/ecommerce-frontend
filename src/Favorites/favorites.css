@@ -1,0 +1,11 @@
+.card-containers{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media(min-width:768px) {
+.card-containers{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+}
+}

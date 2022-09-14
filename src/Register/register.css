@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Grape+Nuts&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quattrocento+Sans:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Water+Brush&display=swap');
+
+
+
+.register{
+   
+  
+    align-items: center;
+    justify-content: center;
+
+  padding: 45px;
+   
+    height: 1000px;
+   width:500px;
+    background-size: cover;
+    background-image: url('https://i.pinimg.com/originals/da/ec/16/daec165cca2d0da221d976adcdb75e3f.jpg');
+   
+}
+.country{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.picture{
+    position: relative;
+    background-image: url('https://scalebranding.com/wp-content/uploads/2020/06/green-tree-circle-01-1080x1080.png');
+    height: 300px;
+    width:300px;
+    
+   background-size: contain;
+}
+.picture h1{
+    position: absolute;
+    top:240px;
+    left: 60px;
+    color: black;
+    letter-spacing: 5px;
+}
+.pics{
+    height: 450px;
+}
+.forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding-top: 50px;
+  width:300px;
+
+    background-color: rgb(78, 131, 78);
+    height: 400px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.forms input{
+margin :10px;
+height: 20px;
+
+border-radius: 5px;
+border: 1px solid rgb(128, 128, 128, 0.3);
+}
+
+.x{
+    width:260px;
+}
+.y{
+    width:110px;
+}
+
+::placeholder{
+ font-family: 'Poppins',sans-serif;
+ letter-spacing: 1px;
+ padding-left: 5px;
+
+
+}
+.btn{
+    margin: 10px;
+    background-color: rgb(249, 251, 249);
+    border: 2px solid rgb(128, 128, 128, 0.3);
+    color: rgb(28, 119, 59) !important;
+    font-family: 'Poppins',sans-serif;
+    border-radius:5px ;
+    width: 100px;
+    cursor: pointer;
+}
+form input:focus{
+    outline-color: rgb(47, 121, 47);
+}
+div span{
+    margin-left: 70px;
+    color: white;
+ 
+    
+}
+.loginlink{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+@media(min-width:768px){
+
+
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    width:1100px;
+ flex-direction: row;
+    height: 450px;
+    background-size: cover;
+    background-image: url('https://i.pinimg.com/originals/da/ec/16/daec165cca2d0da221d976adcdb75e3f.jpg');
+}
+.x{
+    width: 400px;
+}
+.y{
+    width: 185px;
+}
+.country{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.picture{
+    position: relative;
+    background-image: url('https://scalebranding.com/wp-content/uploads/2020/06/green-tree-circle-01-1080x1080.png');
+    height: 490px;
+    width:490px;
+    
+   background-size: contain;
+}
+.picture h1{
+    position: absolute;
+    top:370px;
+    left: 150px;
+    color: black;
+    letter-spacing: 5px;
+}
+.pics{
+    height: 450px;
+}
+.forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 500px;
+    background-color: rgb(78, 131, 78);
+    height: 430px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.forms input{
+margin :10px;
+height: 30px;
+
+border-radius: 5px;
+border: 1px solid rgb(128, 128, 128, 0.3);
+}
+::placeholder{
+ font-family: 'Poppins',sans-serif;
+ letter-spacing: 1px;
+ padding-left: 5px;
+
+
+}
+.btn{
+    margin: 10px;
+    background-color: rgb(249, 251, 249);
+    border: 2px solid rgb(128, 128, 128, 0.3);
+    color: rgb(28, 119, 59) !important;
+    font-family: 'Poppins',sans-serif;
+    border-radius:5px ;
+    width: 100px;
+    cursor: pointer;
+}
+form input:focus{
+    outline-color: rgb(47, 121, 47);
+}
+div span{
+    margin-left: 110px;
+    color: white;
+    
+   padding-left: 10px;
+   padding-right: 10px;
+    
+}
+.loginlink{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+}
+

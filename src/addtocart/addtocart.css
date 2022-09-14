@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Grape+Nuts&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quattrocento+Sans:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Water+Brush&display=swap');
+
+.CartPage{
+display: flex;
+
+padding: 50px;
+height: 400px;
+
+}
+.cartitems{
+   
+   
+    width: 100vw;
+  
+}
+
+.shopping-cart{
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 2px;
+   font-weight: 500;
+   padding-left: 30px;
+  
+
+}
+.buynow-button{
+    display: flex;
+    justify-content: right;
+   padding-top: 50px;
+    width:990px;
+}
+.buynow-btn{
+    border: 1px solid rgb(128, 128, 128, 0.3)  ;
+   background-color: white;
+   cursor: pointer;
+   border-radius: 10px;
+  display: flex;
+  width:170px;
+ justify-content: space-between;
+  align-items: center;
+
+}
+.buynow{
+font-family: "Poppins",sans-serif;
+color: black;
+letter-spacing: 2px;
+font-weight: 300;
+
+}
+
+.product-details span{
+    color: black;
+    letter-spacing: 1px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 300;
+    
+}
+.product-detail{
+
+    margin-right: 200px;
+}
+.product-details{
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+.product-image{
+    height: 200px;
+    width:200px;
+}
+.cart-products{
+  
+    padding: 20px;
+}
+.product-title{
+    font-family: "Poppins",sans-serif;
+    letter-spacing:1px;
+    margin-left: 10px;
+  
+}
+.cart-products{
+    display: flex;
+   
+   
+}
+.product-size,.product-code{
+   
+    margin-left: 10px;
+    margin-top: 0px;
+    
+}
+.product-size span,.product-code span{
+    color: black;
+    margin-left: 0px;
+    
+    
+}
+
+.product-description{
+    padding: 0;
+    display: flex;
+    width:250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+   
+}
+.product-details-others{
+  
+    width:700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+}
+.quantity{
+    
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.titles-quantity{
+    margin-left: 70px;
+   
+   
+}
+.grand-total-price{
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-quantity{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}

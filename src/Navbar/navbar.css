@@ -1,0 +1,149 @@
+.navbar{
+    display: none;
+}
+.logout{
+    color: black;
+}
+
+.mobile-nav{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: #ff696a;
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+}
+.mobile-menu{
+    color: white;
+}
+.dropdown-divider{
+    opacity: 0.5;
+}
+.dropdowns{
+    display: none;
+    text-align:center;
+   
+}
+.mobile-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    
+}
+.mobile-logo img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+.homelink{
+    margin-right: 15px;
+    text-decoration: none;
+    color: rgb(128, 128, 128, 0.5);
+}
+@media(min-width:768px){
+    .mobile-navbar {
+        display: none;
+    }
+    .dropdowns{
+        display:none !important;
+    }
+    .navbar{
+        display: inline;
+        height: 80px;
+    
+    }
+    
+    .line{
+    opacity: 0.5;
+    
+    }
+    .navbar-sections{
+        display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    width: 100vw;
+    justify-content: left;
+    
+    
+    }
+    .mall{
+        color: black;
+    }
+    .heart{
+        color: black;
+    }
+    
+    p{
+        margin: 20px;
+       
+    }
+    .cart{
+        text-decoration: none;
+        
+    }
+    .navbar-contents{
+        display: flex;
+        
+      
+       
+    }
+    .logo{
+        height: 50px;
+        align-self: center;
+        padding: 10px;
+        margin-right: 200px;
+    display: flex;
+    letter-spacing: 1px;
+    }
+    .profile-pic{
+        
+        height: 35px;
+        width:35px;
+        padding: 2px;
+        border: 1px solid green;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .profile-pic>img{
+        height:35px;
+        width:35px;
+        border-radius: 50%;
+        
+    }
+    .cart{
+       position: relative; 
+       cursor: pointer;
+    }
+    .heart{
+        cursor: pointer;
+    }
+    .number{
+        padding: 2px;
+        text-align: center;
+        background-color: rgb(231, 90, 90);
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 700;
+            position: absolute;
+            top:15px;
+            left:10px;
+    }
+    .profile-pic-container{
+        display: flex;
+          width:400px;
+        justify-content: space-around;
+     
+        align-items: center;
+    }
+    .navbar-sections>p{
+        cursor: pointer;
+    }
+    .logo>img{
+        height: 70px;
+        width:70px;
+    }
+}

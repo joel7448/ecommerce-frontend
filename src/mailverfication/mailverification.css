@@ -1,0 +1,21 @@
+.mailverificationform{
+    width:400px;
+}
+.mailverficationwrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mailverificationbutton{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    border:none;
+    margin-left: 10px;
+    width:380px;
+    border-radius: 10px;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Grape+Nuts&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quattrocento+Sans:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Water+Brush&display=swap');
+
+.home{
+    display: grid;
+    place-content: center;
+    margin: 0;
+    height: 100vh;
+    width:100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://wallpaperaccess.com/full/1741960.jpg");
+}
+h1{
+    letter-spacing: 2px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: rgb(194, 192, 192);
+}
+.container{
+    width: 280px;
+    text-align: left;
+    padding: 30px;
+}
+.button{
+    height: 60px;
+      width:300px;
+    border-radius: 15px;
+    border: none;
+      font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-decoration: none;
+      position: relative;
+      left: 40px;
+      top:20px;
+
+}
+
+
+.button:hover{
+    background-color: white;
+    color: black;
+    
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Grape+Nuts&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Quattrocento+Sans:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Water+Brush&display=swap');
+.mobilesidebar{
+display: block;
+width:100px;
+margin-left: 0px;
+
+
+}
+.mobile-filter{
+    text-align: center;
+}
+.mobilesidebar-components{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   width:152px;
+   padding-left: 220px;
+   overflow-y: scroll;
+}
+.mobile-sidebar-divider{
+    opacity: 0.5;
+    width:100vw;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.mobilesidebar-components-heading{
+    text-align: center;
+    font-size:12px;
+font-family: 'Poppins',sans-serif;
+  margin-left: 10px;
+    color: rgb(128, 128, 128);
+    width:100px;
+    height: 20px;
+  
+ padding: 5px;
+ padding-top: 7px;
+ letter-spacing: 2px;
+    border-radius: 20px;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+   
+}
+@media(min-width:768px){
+    .mobilesidebar{
+        display: none;
+    }
+}
