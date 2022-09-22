@@ -25,6 +25,7 @@ let navigate = useNavigate();
       localStorage.setItem("token",data.data.token);
       localStorage.setItem("user",data.data.userid);
       localStorage.setItem("email",data.data.email)
+      alert("Successfully logged in !");
       navigate("/home")
    }
    catch(err){
