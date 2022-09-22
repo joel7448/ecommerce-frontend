@@ -4,7 +4,14 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const RegisterReducer = (state={},action)=>{
 
+    //action:{
+// payload:"",
+// type:""
+    //}
     
+
+
+
  switch(action.type){
     case "Register":
 
@@ -17,7 +24,7 @@ const RegisterReducer = (state={},action)=>{
                 console.log(err);
             }
         }
-reg(action.payload);
+reg(action.payload);  //function call
         return state = action.payload;
         break;
         
@@ -43,6 +50,7 @@ reg(action.payload);
             return state;
             break;
  }
+ 
  
 }
 

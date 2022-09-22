@@ -11,9 +11,13 @@ import instance from "../api/api"
 import { useEffect } from "react"
 import './addtocart.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import StripeCheckout from 'react-stripe-checkout'
 
 function Addtocart() {
-
+  const [stripeToken,setStripeToken] = useState(null);
+  const KEY ="pk_test_51LibhvSEGG6beOhbjaxHMkLiOvmUsCi4F8uAJN5DAmLoglv5sbKxvekrx6ISjLi69vb01MSegfOsIqOf2SmUX9Y700YhgKuIyv";
+const navigate = useNavigate();
   const carts = useSelector(state=>state.cart);
   const dispatch = useDispatch();
   const {addtocart} = bindActionCreators(actionCreators,dispatch);
@@ -33,7 +37,25 @@ const [total,setotal]=useState();
   useEffect(()=>{
     fetchdata();
 
-  },[])
+    const makerequest = async ()=>{
+try{
+const response =  await instance.post(`/server/payment/payment`,{
+  tokenId:stripeToken.id,
+  amount:total,
+
+
+})
+console.log(response.data);
+// navigate("/checkout-success")
+}
+catch(err){
+  console.log(err);
+  navigate("/checkout-success")
+}
+    }
+    stripeToken&&makerequest()
+
+  },[stripeToken,total])
 
   const handledelete = async(productid)=>{
     try{
@@ -47,6 +69,7 @@ alert("successfully deleted");
     catch(err){
       console.log(err);
     }
+    fetchdata()
   }
 const increment = async(productid)=>{
   try{
@@ -60,6 +83,7 @@ const increment = async(productid)=>{
   catch(err){
     console.log(err);
   }
+  fetchdata();
 }
 
 const decrement = async(productid)=>{
@@ -69,12 +93,20 @@ await instance.put(`/server/addtocart/cart/decrease/${productid}`,{
     Authorization: `${localStorage.getItem("token")}`,
   },
 })
+
   }
   catch(err){
     console.log(err);
   }
+
+  fetchdata();
 }
 
+
+
+const onToken = (token)=>{
+setStripeToken(token);
+}
   return (
   <>
 <Navbar></Navbar>
@@ -136,7 +168,13 @@ await instance.put(`/server/addtocart/cart/decrease/${productid}`,{
 
 </div>
 <div className='buynow-button'>
-<button className='buynow-btn'><h1 className='buynow'>Buy Now</h1><ArrowForward/> </button>
+  <StripeCheckout name="Cranberry" image="https://scalebranding.com/wp-content/uploads/2020/06/green-tree-circle-01-1080x1080.png" billingAddress 
+  shippingAddress description={`Your total is ${total} `}
+  amount={total*100}
+  token={onToken}
+  stripeKey={KEY}>
+<button className='buynow-btn' ><h1 className='buynow'>CheckOut</h1><ArrowForward/> </button>
+</StripeCheckout>
 </div>
 
 

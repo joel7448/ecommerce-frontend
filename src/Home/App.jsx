@@ -18,6 +18,7 @@ import Mobilesidebar from '../sidebar/Mobile-sidebar';
 import Forgotpassword from '../forgotpassword/forgotpassword';
 import Mailverification from '../mailverfication/Mailverification';
 import Passwordchange from '../passwordchange/Passwordchange';
+import Checkoutsuccess from '../Checkout/Checkoutsuccess';
 
 
 
@@ -40,6 +41,7 @@ function App() {
 <Route path="/forgot-password" element={<Forgotpassword/>}/>
 <Route path="/mailverification" element={<Mailverification/>}/>
 <Route path="/passwordchange" element={<Passwordchange/>}/>
+<Route path="/checkout-success" element={<Checkoutsuccess/>}/>
 </Routes>
 </BrowserRouter>
 

@@ -15,7 +15,6 @@ import axios from "axios"
 function Card() {
 
   const product = useSelector(state=>state.product);
-  
   const dispatch = useDispatch();
   const {getproducts} = bindActionCreators(actionCreators,dispatch);
 
@@ -26,6 +25,7 @@ function Card() {
       },
     })
     getproducts(data.data);
+    
   }
 
   useEffect(()=>{

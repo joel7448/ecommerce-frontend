@@ -35,6 +35,7 @@ const formik = useFormik({
       passwordchange(values);
       localStorage.removeItem("otp");
       localStorage.removeItem("email");
+      alert("Password has been updated successfully");
       navigate("/login");
         }
         else{
