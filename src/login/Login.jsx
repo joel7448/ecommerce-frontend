@@ -2,18 +2,14 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import './login.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actionCreators } from '../Action-creator';
-import {userlogin} from "../Action-creator/account-action"
+
+import instance from '../api/api';
 
 
 function Login() {
 
 let navigate = useNavigate();
-const account = useSelector(state=>state.account);
-const dispatch = useDispatch();
-const {userlogin} = bindActionCreators(actionCreators,dispatch);
+
 
 
   const formik = useFormik({
@@ -22,10 +18,21 @@ const {userlogin} = bindActionCreators(actionCreators,dispatch);
       email:"",
       password:"" 
     },
-   onSubmit: values=>{
-    userlogin(values);
+   onSubmit: async(values)=>{
+    try{
+      const data =  await instance.post('server/users/signin',values)
+      
+      localStorage.setItem("token",data.data.token);
+      localStorage.setItem("user",data.data.userid);
+      localStorage.setItem("email",data.data.email)
+      navigate("/home")
+   }
+   catch(err){
+       console.log(err);
+   }
+
     
-    navigate("/home")
+    
    }
   })
 

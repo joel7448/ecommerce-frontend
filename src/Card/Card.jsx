@@ -3,7 +3,7 @@ import {StarBorderOutlined, StarOutlined,Favorite,FavoriteBorderOutlined} from "
 import Search from "../Search/Search"
 import Sidebar from '../sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from "../Action-creator";
@@ -25,7 +25,7 @@ function Card() {
       },
     })
     getproducts(data.data);
-    
+
   }
 
   useEffect(()=>{
