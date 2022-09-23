@@ -30,6 +30,13 @@ const out = ()=>{
    navigate("/login");
 }
 
+
+const addtocart = ()=>{
+    navigate("/mycart");
+}
+const favorites = ()=>{
+    navigate("/myfavorites")
+}
   return (<>    <div className="navbar">
         <div className="navbar-contents">
             <div className="logo"><img src="https://scalebranding.com/wp-content/uploads/2020/06/green-tree-circle-01-1080x1080.png"/><h3>Cranberry</h3></div>
@@ -71,11 +78,11 @@ const out = ()=>{
         <hr className="dropdown-divider"/>
         <h3>Blogs</h3>
         <hr className="dropdown-divider"/>
-        <h3>Add to Cart</h3>
+        <h3 onClick={()=>{addtocart()}}>Add to Cart</h3>
         <hr className="dropdown-divider"/>
-        <h3>Favorites   </h3>
+        <h3 onClick={()=>{favorites()}}>Favorites   </h3>
         <hr className="dropdown-divider"/>
-        <h3>Logout</h3>
+        <h3 onClick={()=>{out()}}>Logout</h3>
         <hr className="dropdown-divider"/>
 
     </div>
