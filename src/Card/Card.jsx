@@ -1,5 +1,5 @@
 import "./Card.css"
-import {StarBorderOutlined, StarOutlined,Favorite,FavoriteBorderOutlined} from "@mui/icons-material"
+import {StarBorderOutlined, StarOutlined,Favorite,FavoriteBorderOutlined, FavoriteOutlined, FavoriteBorder} from "@mui/icons-material"
 import Search from "../Search/Search"
 import Sidebar from '../sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
@@ -11,6 +11,9 @@ import {getproducts} from "../Action-creator/account-action"
 import Mobilesidebar from "../sidebar/Mobile-sidebar";
 import instance from "../api/api"
 import axios from "axios"
+import { toast } from "react-toastify";
+import SearchIcon from '@mui/icons-material/Search';
+import { useFormik } from "formik";
 
 function Card() {
 
@@ -24,6 +27,7 @@ function Card() {
         Authorization: `${localStorage.getItem("token")}`,
       },
     })
+   
     getproducts(data.data);
 
   }
@@ -52,6 +56,43 @@ console.log(cartdata.data);
 
 
 }
+const handlefavorites = async(productid)=>{
+  try{
+    
+  const update = await instance.put(`server/products/addfavorites/${productid}`,{
+    headers: {
+      Authorization: `${localStorage.getItem("token")}`,
+    },
+    
+  });
+fetchdata();
+
+  }
+  catch(err){
+    console.log(err);
+  }
+}
+
+const formik = useFormik({
+  initialValues:{
+    name:""
+  },
+  onSubmit:async (values)=>{
+    try{
+ const data = await instance.get(`/server/products/menu/${values.name}`,{
+    headers: {
+      Authorization: `${localStorage.getItem("token")}`,
+    },
+   })
+
+getproducts([data.data]);
+
+  }
+  catch(err){
+    console.log(err);
+  }
+  }
+})
   
 
 
@@ -64,15 +105,24 @@ console.log(cartdata.data);
      
     <div className='card-container' >
     <Mobilesidebar></Mobilesidebar>
-    <div><Search></Search></div>
+    <form onSubmit={formik.handleSubmit}>
+      
+      <div className='Searchbox' >
+      <input className='Search' name="name" value={formik.values.name} onChange={formik.handleChange} placeholder='Search'></input>
+      <button className="searchbutton" type="submit">
+   <SearchIcon  className='searchicon'/>
+   </button>
+ 
+    </div>
+    </form>
     <div></div>
  
 
      
    { product.map((x)=>{
     return(<div className="card">
-    <div className="favorite-box">
-    <Favorite  className="favorites" /> 
+    <div className="favorite-box" onClick={()=>{handlefavorites(x._id)}}>
+    {x.favorites?<Favorite className="favorites"/>:<FavoriteBorder  className="favorites" /> }
     </div>
 <img src={x.image}/>
 <h3>{x.Productname}</h3>

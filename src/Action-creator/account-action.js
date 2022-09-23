@@ -78,3 +78,17 @@ export const userlogin = (user) =>{
          
       }
    }
+
+
+   export const addtofavorites =(favorites)=>{
+      
+      return (dispatch)=>{
+         dispatch({
+          type:'addtofavorites',
+          payload :favorites
+         })
+         
+      }
+   }
+
+

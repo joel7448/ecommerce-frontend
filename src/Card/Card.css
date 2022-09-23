@@ -36,6 +36,12 @@
   .favorites{
       color: #ff696a;
   }
+  .searchbutton{
+    background-color: white;
+    border: none;
+    
+  }
+ 
   
   .addtocart{
      text-align: right;

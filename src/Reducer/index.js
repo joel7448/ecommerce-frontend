@@ -5,6 +5,7 @@ import cart from "./cartreducer"
 import forgotpasswordreducer from "./forgotpasswordreducer";
 import  otpverificationreducer from "./otpverifyreducer"
 import passwordchangereducer from "./passwordchangereducer";
+import favorites from "./addfavorites";
 
 
 const reducers = combineReducers({
@@ -13,7 +14,8 @@ const reducers = combineReducers({
      cart : cart,
      forgotpasswordreducer : forgotpasswordreducer,
      otpverification:otpverificationreducer,
-     passwordresetreducer : passwordchangereducer
+     passwordresetreducer : passwordchangereducer,
+     favorites:favorites
 })
 
 export default reducers
