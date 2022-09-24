@@ -57,20 +57,20 @@ console.log(cartdata.data);
 
 }
 const handlefavorites = async(productid)=>{
-  try{
+  productid.email=localStorage.getItem("email");
     
-  const update = await instance.put(`server/products/addfavorites/${productid}`,{
+  const update = await instance.post(`/server/favorites/addtofavorites`,productid,{
     headers: {
       Authorization: `${localStorage.getItem("token")}`,
     },
     
   });
-fetchdata();
 
-  }
-  catch(err){
-    console.log(err);
-  }
+alert(update.data);
+console.log(productid);
+
+  
+  
 }
 
 const formik = useFormik({
@@ -121,8 +121,8 @@ getproducts([data.data]);
      
    { product.map((x)=>{
     return(<div className="card">
-    <div className="favorite-box" onClick={()=>{handlefavorites(x._id)}}>
-    {x.favorites?<Favorite className="favorites"/>:<FavoriteBorder  className="favorites" /> }
+    <div className="favorite-box" onClick={()=>{handlefavorites(x)}}>
+    <Favorite className="favorites"/> 
     </div>
 <img src={x.image}/>
 <h3>{x.Productname}</h3>

@@ -18,11 +18,13 @@ function Favorites() {
 
 const fetchdata = async()=>{
   try{
-  const data = await instance.get(`/server/products/favorites`,{
+
+  const data = await instance.get(`/server/favorites/getfavorites/${localStorage.getItem("email")}`,{
     headers: {
       Authorization: `${localStorage.getItem("token")}`,
     },
   })
+  
   addtofavorites(data.data);
 }
 catch(err){
@@ -44,9 +46,11 @@ fetchdata();
     },
     
   });
+  alert("Added to cart")
   console.log(cartdata.data);
     }
     catch(err){
+      alert("Failed to add in cart")
       console.log(err);
     }
    
