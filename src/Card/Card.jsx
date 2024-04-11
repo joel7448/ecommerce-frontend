@@ -47,6 +47,7 @@ const cartdata = await instance.post(`/server/addtocart/cart`,product,{
   },
   
 });
+alert("Added to cart !")
 console.log(cartdata.data);
   }
   catch(err){
@@ -105,7 +106,7 @@ getproducts([data.data]);
      
     <div className='card-container' >
     <Mobilesidebar></Mobilesidebar>
-    <form onSubmit={formik.handleSubmit}>
+    {/* <form onSubmit={formik.handleSubmit}>
       
       <div className='Searchbox' >
       <input className='Search' name="name" value={formik.values.name} onChange={formik.handleChange} placeholder='Search'></input>
@@ -114,8 +115,8 @@ getproducts([data.data]);
    </button>
  
     </div>
-    </form>
-    <div></div>
+    </form> */}
+    {/* <div></div> */}
  
 
      
